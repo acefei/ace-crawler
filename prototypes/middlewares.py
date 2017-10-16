@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import requests
+import base64
 from fake_useragent import UserAgent
+from utils.http_proxy_pool import get_proxy_for_scrapy
 
 
 class RandomUserAgentMiddleware(object):
@@ -67,5 +69,14 @@ class RandomHttpProxyMiddleware(object):
             return new_request
         return response
 
-    def need_to_change_proxy(self, *args, *kwargs):
+    def need_to_change_proxy(self, *args, **kwargs):
+        """Strategy to change proxy"""
         return False
+
+
+class RandomHttpProxyMiddleware_v1(object):
+    def process_request(self, request, spider):
+        proxy, auth = get_proxy_for_scrapy()
+        request.meta['proxy'] = proxy
+        request.headers['Proxy-Authorization'] = 'Basic ' + base64.encodestring(auth)
+

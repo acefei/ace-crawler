@@ -5,7 +5,9 @@ BOT_NAME = 'prototypes'
 SPIDER_MODULES = ['prototypes.spiders']
 NEWSPIDER_MODULE = 'prototypes.spiders'
 
-# Below is Common Settings
+
+####### Below is Common Settings #######
+
 # If you want to add the custom settings, please refer to  
 # https://doc.scrapy.org/en/latest/topics/settings.html?highlight=custom%20setting#settings-per-spider
 LOG_LEVEL = 'DEBUG'
