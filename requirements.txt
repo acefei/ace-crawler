@@ -1,3 +1,5 @@
+readability-lxml
+docopt
 fake_useragent
 scrapy-redis
-ScrapyElasticSearch
+#ScrapyElasticSearch

@@ -5,9 +5,6 @@ RESTAPI = "http://120.25.242.242:10650/getProxy?size=1&stability=100"
 
 HEADERS = {
 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0',
-'Accept': 'application/json, text/plain, */*',
-'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
-'Accept-Encoding': 'gzip, deflate',
 'X-Forwarded-For': '{0}.{1}.{2}.{3}'.format(*__import__('random').sample(range(0,255),4)),
 }
 

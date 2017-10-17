@@ -12,7 +12,7 @@ NEWSPIDER_MODULE = 'prototypes.spiders'
 # https://doc.scrapy.org/en/latest/topics/settings.html?highlight=custom%20setting#settings-per-spider
 LOG_LEVEL = 'DEBUG'
 
-DOWNLOAD_TIMEOUT = 15
+#DOWNLOAD_TIMEOUT = 15
 
 # Settings for anti-anti-crawl
 RETRY_ENABLED = False
@@ -34,7 +34,7 @@ UA_TYPE = 'random'
 
 
 # Save result as json
-# FEED_URI = 'prototypes.json'
+FEED_URI = 'prototypes.json'
 
 # Json output with chinese
 from scrapy.exporters import JsonLinesItemExporter

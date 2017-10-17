@@ -76,7 +76,10 @@ class RandomHttpProxyMiddleware(object):
 
 class RandomHttpProxyMiddleware_v1(object):
     def process_request(self, request, spider):
-        proxy, auth = get_proxy_for_scrapy()
-        request.meta['proxy'] = proxy
-        request.headers['Proxy-Authorization'] = 'Basic ' + base64.encodestring(auth)
+        if 'change_proxy' in request.meta:
+            proxy, auth = get_proxy_for_scrapy()
+            spider.logger.debug("change_proxy {0} {1}".format(proxy, auth))
+            request.meta['proxy'] = proxy
+            request.headers['Proxy-Authorization'] = 'Basic ' + base64.encodestring(auth)
+            request.meta.pop('change_proxy')
 
