@@ -2,7 +2,7 @@
 ====
 
 ### Usage
-进入prototypes/executors目录, 运行 python run_<you want>.py
+详情见prototypes/executors目录内各脚本的 __doc__
 
 ### Feature
 1. 集成scrapy-redis
