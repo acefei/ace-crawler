@@ -7,9 +7,9 @@ Usage:
 
 Options:
   -k KEYWORD        Query KEYWORD [default: 东莞农村商业银行]
-  -n NAV            Query Category, [default: news]
-                    Options: [web, news]
-  -d DEPTH_LIMIT    The maximum depth that will be allowed to crawl [default: 1]
+  -n NAV            Query Category, [default: web]
+                    Options: [web, news, weixin]
+  -d DEPTH_LIMIT    The maximum depth that will be allowed to crawl [default: 3]
 """
 from docopt import docopt
 from scrapy.crawler import CrawlerProcess
@@ -26,10 +26,11 @@ if __name__ == '__main__':
 
     print " k = {0},  n = {1},  d = {2}".format(keyword, nav, depth)
 
+    settings.set('FEED_URI', nav + '.json')
     if depth is not None:
         settings.set('DEPTH_LIMIT', depth)
         print "Update DEPTH_LIMIT settings ", settings.get('DEPTH_LIMIT')
 
     process = CrawlerProcess(settings)
-    process.crawl('sougou_search', keyword=keyword, nav=nav, depth=depth)
+    process.crawl('sogou_search', keyword=keyword, nav=nav)
     process.start()
