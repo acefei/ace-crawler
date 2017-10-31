@@ -1,7 +1,19 @@
+# html content extract
 readability-lxml
-docopt
+
+# custom http header with user agent
 fake_useragent
+
+# web crawl tools
 scrapy-redis
 selenium
 
+# deploy for scrapy
+scrapyd
+scrapyd-client
+
+# scrapy extension
 #ScrapyElasticSearch
+
+# parse command option
+docopt

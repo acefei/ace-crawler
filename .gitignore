@@ -1,3 +1,9 @@
 *.pyc
 *.log
 .idea/
+**/dbs/
+**/prototypes.json
+project.egg-info/
+build/
+setup.py
+.ropeproject/

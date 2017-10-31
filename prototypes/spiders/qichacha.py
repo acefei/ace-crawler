@@ -27,7 +27,8 @@ class QichacahSpider(scrapy.Spider):
     }
 
     # cookie 有效期一个星期
-    def __init__(self, qcc_id='hv55kkvlbf93ceu0nnbbs7jq21'):
+    def __init__(self, qcc_id='hv55kkvlbf93ceu0nnbbs7jq21', *args, **kwargs):
+        super(QichacahSpider, self).__init__(*args, **kwargs)
         self.qcc_cookie = {'PHPSESSID': qcc_id}
 
     # scrapy start and check page num
