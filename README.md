@@ -6,9 +6,9 @@
 
 ### Feature
 [x] 集成scrapy-redis       
-[x] 改造dupefilter，使用bloomfilter      
+[x] 改造scrapy-redis dupefilter，使用bloomfilter      
+[x] 增加自定义extensions去自动关闭scrapy-redis spider。
 [x] 通用网页正文抽取        
-[x] 搜狗搜索爬虫，url解密       
 [x] scrapyd部署  
 
 ### Inspiration
