@@ -7,7 +7,8 @@
 ### Feature
 [x] 集成scrapy-redis       
 [x] 改造scrapy-redis dupefilter，使用bloomfilter      
-[x] 增加自定义extensions去自动关闭scrapy-redis spider。
+[x] 增加自定义extensions去自动关闭scrapy-redis spider     
+[x] Redis数据迁移     
 [x] 通用网页正文抽取        
 [x] scrapyd部署  
 
