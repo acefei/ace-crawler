@@ -13,7 +13,7 @@ scrapyd
 scrapyd-client
 
 # scrapy extension
-#ScrapyElasticSearch
+ScrapyElasticSearch
 
 # parse command option
 docopt
