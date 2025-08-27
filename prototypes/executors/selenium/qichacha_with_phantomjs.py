@@ -72,7 +72,7 @@ def login_homepage_to_get_cookie():
     #print driver.get_cookies()
     print "准备..."
 
-def do_query(keyword=u"南京银行"):
+def do_query(keyword=u"云软件系统"):
     """
     在企查查搜索框搜索keyword相关企业，并取第一个作为最佳匹配结果
     """
