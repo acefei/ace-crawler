@@ -33,7 +33,7 @@ class QichacahSpider(scrapy.Spider):
 
     # scrapy start and check page num
     def start_requests(self):
-        firm_name = '南京银行'
+        firm_name = '云软件系统'
         request = scrapy.Request(
             "http://m.qichacha.com/search?key="+firm_name,
             # cookies=self.qcc_cookie,
@@ -71,3 +71,4 @@ class QichacahSpider(scrapy.Spider):
 if __name__ == '__main__':
     from scrapy import cmdline
     cmdline.execute('scrapy crawl {0}'.format(os.path.basename(__file__).split('.')[0]).split())
+
